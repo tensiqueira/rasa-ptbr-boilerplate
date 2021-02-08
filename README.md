@@ -154,7 +154,8 @@ language : "pt
 
 pipeline:
   - name: WhitespaceTokenizer
-  - name: "components.sentiment_analyzer.SentimentAnalyzer"                                                                                        - name: RegexFeaturizer
+  - name: "components.sentiment_analyzer.SentimentAnalyzer"
+  - name: RegexFeaturizer
 ```
 
 Depois, como no exemplo do arquivo `bot/components/labels.yml`, adicione frases que correspondam à uma label(classificação ou sentimento).
