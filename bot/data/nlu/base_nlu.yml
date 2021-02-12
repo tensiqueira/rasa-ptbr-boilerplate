@@ -1,0 +1,503 @@
+version: "2.0"
+nlu:
+- intent: base_cumprimentar
+  examples: |
+    - olá
+    - Ola
+    - Oi
+    - bom dia
+    - boa tarde
+    - boa noite
+
+- intent: base_despedir
+  examples: |
+    - tchau
+    - adeus
+    - flw
+    - Até mais, bot
+
+- intent: base_testa_acoes
+  examples: |
+    - testa acoes
+    - test custom action
+    - custom action
+    - custom actions
+    - test action
+    - Rasa actions
+
+- intent: base_informa_telefone
+  examples: |
+    - O meu número é [61 99999-9999](telefone)
+    - meu telefone é [999999999](telefone)
+    - Sim, anota ai meu telefone: [61 99999-9999](telefone))
+    - Ok, o meu número de telefone é [999999999](telefone)
+
+- intent: base_license
+  examples: |
+    - qual e a sua [licença](license)
+    - qual e a sua [licenca](license)
+    - voce e [licenciado](license)
+    - sua [licenca de software](license)
+    - posso copiar voce
+    - posso te clonar
+    - posso ter um bot como voce
+    - posso ver seu [codigo](license)
+    - voce e [opensource](license)
+    - você é um software livre
+    - voce e um [software livre](license)
+    - vc é um software livre
+    - [software livre](license)
+    - [licença](license)
+    - [licenca](license)
+
+- intent: base_triste
+  examples: |
+    - Estou [triste](triste)
+    - Estou muito [triste](triste)
+    - [Tristeza](triste)
+    - A [tristeza](triste) me consome
+    - Estou [chorando](triste)
+    - Estou [desapontado](triste)
+    - [depressão](triste)
+    - estou infeliz
+    - estou magoado
+    - estou desanimado
+    - estou frustrado
+    - me sinto fracassado
+    - sou um fracasso
+    - tô muito triste
+    - tô triste
+    - tô infeliz
+    - tô magoado
+    - tô frustrado
+
+- intent: base_out_of_scope
+  examples: |
+    - você fala sobre o meio ambiente
+    - qual a origem do mundo
+    - vc gosta de carnaval
+    - batatinha quando nasce
+    - imbecil
+    - nojento
+    - chato
+    - babaca
+    - bot feio
+    - bot, burro
+
+- intent: base_elogios
+  examples: |
+    - você é muito educado
+    - voce e muito educado
+    - me ajudou muito
+    - você é demais
+    - você é lindo
+    - voce e lindo
+    - voce e maravilhoso
+    - vc é demais
+    - vc e demais
+    - vc eh linda
+    - vc e lindo
+    - vc é bonito
+    - vc é maravilhoso
+    - adorei você
+    - amei você
+    - adorei voce
+    - amei voce
+    - adorei vc
+    - amei vc
+
+- intent: base_negar
+  examples: |
+    - NEGAT
+    - NEGA
+    - NEG
+    - não
+    - nao
+    - nao conheco
+    - não quero
+    - escolhi errado
+    - falei errado
+    - duvida
+    - ainda não sei
+    - nenhum
+    - nunca
+    - jamais
+    - nego
+    - cancelo
+    - negativo
+    - eu não quero
+    - Eu não quero dar para você
+    - Eu não quero dizer
+    - Eu não quero te dizer
+    - Eu não quero contar
+    - Eu não quero te contar
+    - Não estou lhe dando meu endereço de e-mail
+    - Eu não vou dar para você
+    - NEIN
+    - NÃO
+    - NÃO QUERO ISSO!
+    - Nah
+    - Nem
+    - Nunca
+    - Deixa pra lá
+    - Não
+    - não obrigado
+    - Não, na verdade não.
+    - nao obrigado
+    - Não.
+    - Nopes
+    - Na verdade não
+    - absolutamente não
+    - definitivamente não
+    - negar
+    - eu recuso
+    - eu não gosto disso
+    - Acho que não
+    - eu não quero nenhum desses
+    - eu não quero te dar meu e-mail
+    - ñ
+    - eu não quero aceitar :P lol
+    - eu acho que significa - não
+    - Receio que não
+    - Não tenho certeza
+    - está indo muito mal
+    - é uma merda
+    - n
+    - n :(
+    - nah
+    - nah estou bem
+    - nah não para mim
+    - nah, primeira vez
+    - nehi
+    - nein
+    - nem
+    - deixa pra lá
+    - nã
+    - não :(
+    - não eu não quero
+    - não, ainda não decidi se quero me inscrever
+    - não e não de novo
+    - sem bots
+    - não vá
+    - não, eu não posso
+    - não, eu não aceito
+    - não, eu não quero
+    - não, eu não quero aceitar: P lol
+    - não, eu não vou
+    - não Senhora
+    - não senhor
+    - não desculpe
+    - não, obrigado
+    - de jeito nenhum
+    - não, você fez errado
+    - não!!!!
+    - não, eu odeio isto
+    - não, minha primeira vez
+    - não. você é idiota
+    - noooooooooo
+    - noooooooooooooooooooooooooooooooooooooooo
+    - Não!
+    - Não. eu estou bem
+    - não está indo bem
+    - não agora
+    - ainda não
+    - desculpe, não agora
+    - ainda não quero contar
+    - obrigado mas não obrigado
+    - isso é péssimo
+    - muito mal
+    - Não preciso de ajuda para instalar
+    - Não quero dizer o nome da minha empresa
+    - não pare
+    - pare com isso, eu não me importo !!!
+    - nenhum deles
+    - não concordo
+
+- intent: base_diga_mais
+  examples: |
+    - como funciona
+    - me diga mais
+    - como assim
+    - e como funciona
+
+- intent: base_tudo_bem
+  examples: |
+    - tudo bem
+    - como vai voce
+    - como vao as coisas
+    - opa tudo bem
+    - to bem
+    - tranquilo
+    - estou bem
+    - estou otimo
+    - tudo bem e você
+    - tudo bom
+    - tá bem
+    - ta bem
+    - como vocês esta
+    - como voce esta
+    - como voce ta
+    - como vai você
+    - como vai vc
+
+- intent: base_o_que_sei_falar
+  examples: |
+    - sobre o que você sabe falar
+    - o que mais você sabe falar
+    - quais assuntos você fala
+    - o que você sabe
+    - lista de assuntos possiveis
+    - quais as perguntas vc responde
+    - quais as perquisar você responde
+    - quero ajuda
+    - meajuda
+    - meajude
+    - MEAJDA
+    - me ajuda
+    - me ajude
+    - ajuda eu
+    - menu
+
+- intent: base_afirmar
+  examples: |
+    - confirmo
+    - afirmo
+    - claro
+    - exato
+    - isso mesmo
+    - aceitar
+    - Impressionante!
+    - Boa
+    - Ótimo
+    - Aceito
+    - Aceito.
+    - Concordo
+    - Estou usando
+    - Eu mudei de ideia. Eu quero aceitar isso
+    - Eu faço
+    - I obtê-lo
+    - Eu acho
+    - Eu usei no passado
+    - Eu vou
+    - Eu adoraria isso
+    - Estou certo de que vou!
+    - Estou usando isso
+    - Agradável
+    - ESTÁ BEM
+    - Claro
+    - Ai sim
+    - Ah ok
+    - Está bem
+    - OK vamos começar
+    - Está bem.
+    - OK
+    - OK!
+    - POR FAVOR
+    - CERTO
+    - Certo
+    - doce
+    - Isso seria bom
+    - AFI
+    - SIM
+    - sim
+    - Sim
+    - Sim claro
+    - Afi
+    - Sim, tudo bem
+    - Sim!
+    - afi
+    - Sim eu quero
+    - Sim por favor
+    - Sim por favor!
+    - Sim eu aceito
+    - um pouco
+    - absolutamente
+    - aceitaram
+    - acordado
+    - tudo bem
+    - tudo bem legal
+    - amayzing
+    - surpreendente!
+    - impressionante
+    - impressionante!
+    - confirme
+    - história legal cara
+    - definitivamente sim, sem dúvida
+    - feito
+    - justo
+    - claro
+    - bem
+    - porra, sim!
+    - ir
+    - continue
+    - Vá em frente
+    - indo super bem
+    - Boa.
+    - ótimo
+    - ótimo, vamos fazer isso
+    - ótimo!
+    - Isso aí
+    - Claro que sim
+    - hm, eu gostaria disso
+    - Que bom!
+    - aceito
+    - concordo
+    - eu sou!
+    - eu quero aquilo
+    - eu vou!
+    - está tudo bem
+    - aí sim
+    - jezz
+    - jo
+    - k
+    - kk
+    - vamos fazer isso
+    - não é ruim
+    - claro que eu faço
+    - oh incrível!
+    - Oh fixe
+    - oh bom !!
+    - oh super
+    - OK legal
+    - ok tudo bem
+    - OK amigo
+    - OK ótimo
+    - Ok, eu aceito
+    - ok sara
+    - ok eu me comporte agora
+    - OK eu entendi
+    - ok Sara
+    - Está bem...
+    - Ok
+    - OK fixe
+    - OK, claro
+    - Ok..
+    - oki doki
+    - okie
+    - ok
+    - oui
+    - perfeito
+    - Por favor
+    - si
+    - certo
+    - coisa certa
+    - certo!
+    - isso é legal
+    - está ok
+    - isso soa bem
+    - isso é ótimo
+    - isso é bom
+    - s
+    - topo
+    - uh-huh
+    - muitíssimo
+    - bem, sim
+    - y
+    - tá legal
+    - você vai nessa
+    - sim eu quero
+    - sim, por favor
+    - yaah
+    - yap
+    - yaps
+    - yay
+    - sim, faça isso
+    - sim claro
+    - sim, porque não
+    - yeeeeezzzzz
+    - yeeees
+    - sim, vou fazer obrigado
+    - Sim. : /
+    - sim ...
+    - sim aceite por favor
+    - sim, bebê
+    - sim Legal
+    - sim me dê informações
+    - sim vá em frente
+    - sim ótimo
+    - sim eu aceito
+    - sim eu concordo
+    - sim, eu construí um bot antes
+    - Sim, eu tenho!
+    - Sim, ele é
+    - sim estava tudo bem
+    - sim, claro
+    - sim senhor
+    - sim isso é ótimo
+    - sim é isso que eu quero
+    - sim você pode
+    - yop
+    - você me fez uma pergunta sim ou não, que respondi sim
+    - você me pegou, eu aceito, se você quiser que eu
+    - parece bom!
+    - realmente
+
+- intent: base_objetivo
+  examples: |
+    - Qual o seu objetivo robo?
+    - Qual o seu objetivo robô?
+    - Vc tem um objetivo de existencia?
+    - Você foi feito pra que?
+    - Vc tem algum propósito?
+    - Como que vc pode me ser útil?
+    - Me fale mais sobre você.
+
+- intent: base_cancelar
+  examples: |
+    - Desisto
+    - Para
+    - Cancela
+    - Sai disso
+    - Me tira daqui
+    - Para com isso
+    - Me tira disso
+    - Quero cancelar
+    - Saia dessa conversa
+    - Não quero mais isso
+    - Cancele esta operação
+    - Para de me perguntar coisas
+    - cansei, não quero responder!
+    - Pare o que você está fazendo
+    - Que loucura está acontecendo?!
+    - Não quero compartilhar meus dados
+    - Não quero mais informar meus dados
+
+- intent: base_request_login
+  examples: |
+    - Me ajuda a fazer login?
+    - Gostaria de fazer login
+    - Quero fazer login
+    - Formulário de login
+    - Rasa forms
+
+- intent: base_limpar_slots
+  examples: |
+    - Desejo apagar meus dados
+    - Quero limpar os slots
+    - clean slots
+    - esqueça os meus dados
+    - remova meu CPF e data de nascimento
+    - limpar dados
+
+- intent: base_feedback
+  examples: |
+    - gostei muito desse bot
+    - me ajudou bastante
+    - amei demais
+    - foi muito util
+    - melhor bot
+    - gostei
+    - não gostei
+    - bot inutil
+    - não serviu pra nada
+    - não meu ajudou
+    - não funciona
+    - bot sem classe
+    - tanto faz
+    - irrelevante pra mim
+    - normalzinho
+    - bot normal
+    - nada a declarar
+    - nada de mais
+    - foi normal a conversa
+    - nem fede e nem cheira

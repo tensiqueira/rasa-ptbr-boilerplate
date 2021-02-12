@@ -12,7 +12,7 @@ from rasa_sdk.events import SlotSet
 
 class ActionTelefone(Action):
     def name(self) -> Text:
-        return "action_telefone"
+        return "base_action_telefone"
 
     def run(
         self,

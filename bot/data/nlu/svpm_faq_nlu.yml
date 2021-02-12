@@ -1,0 +1,22 @@
+version: "2.0"
+nlu:
+- intent: svpm_faq_teste
+  examples: |
+    - teste
+    - test
+    - testando
+    - svpm test
+    - svpm teste
+    - teste svpm
+    - test svpm
+
+- intent: svpm_faq_ajuda
+  examples: |
+    - ajuda svpm
+    - preciso de ajuda svpm
+    - você pode me ajudar svpm
+    - me ajude, por favor svpm
+    - me ajude svpm
+    - poderia me ajudar svpm
+    - necessito de ajuda svpm
+    - Preciso de ajuda svpm

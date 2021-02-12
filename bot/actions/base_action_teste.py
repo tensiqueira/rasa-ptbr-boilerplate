@@ -11,7 +11,7 @@ from rasa_sdk.executor import CollectingDispatcher
 
 class ActionTeste(Action):
     def name(self) -> Text:
-        return "action_teste"
+        return "base_action_teste"
 
     def run(
         self,

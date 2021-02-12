@@ -9,13 +9,13 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 200
+    epochs: 110
   - name: EntitySynonymMapper
   - name: ResponseSelector
 
 policies:
   - name: TEDPolicy
-    epochs: 100
+    epochs: 50
     featurizer:
     - name: MaxHistoryTrackerFeaturizer
       max_history: 5
@@ -26,7 +26,6 @@ policies:
     max_history: 5
   - name: MappingPolicy
   - name: FallbackPolicy
-    nlu_threshold: 0.38
-    core_threshold: 0.3
-    fallback_action_name: "utter_fallback"
-
+    nlu_threshold: 0.6
+    core_threshold: 0.6
+    fallback_action_name: "utter_base_fallback"

@@ -1,0 +1,186 @@
+version: "2.0"
+stories:
+- story: story_login_form
+  steps:
+  - intent: base_request_login
+  - action: utter_base_login_form
+  - action: base_login_form
+  - active_loop: base_login_form
+  - active_loop: null
+  - intent: base_afirmar
+  - action: utter_base_finaliza_forms
+
+- story: story_login_form
+  steps:
+  - intent: base_request_login
+  - action: utter_base_login_form
+  - action: base_login_form
+  - active_loop: base_login_form
+  - intent: base_cancelar
+  - action: utter_base_pergunta_cancelar
+  - intent: base_negar
+  - active_loop: login_base_form
+  - active_loop: null
+  - action: utter_base_finaliza_forms
+
+- story: story_login_form_cancelar
+  steps:
+  - intent: base_request_login
+  - action: utter_base_login_form
+  - action: base_login_form
+  - active_loop: base_login_form
+  - intent: base_cancelar
+  - action: utter_base_pergunta_cancelar
+  - intent: base_afirmar
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_base_forms_cancelado
+  - action: utter_base_continuar_conversa
+  - intent: base_negar
+  - action: utter_base_despedir
+
+- story: story_login_form_cancelar
+  steps:
+  - intent: base_request_login
+  - action: utter_base_login_form
+  - action: base_login_form
+  - active_loop: base_login_form
+  - intent: base_cancelar
+  - action: utter_base_pergunta_cancelar
+  - intent: base_afirmar
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_base_forms_cancelado
+  - action: utter_base_continuar_conversa
+
+- story: testa acoes
+  steps:
+  - intent: base_cumprimentar
+  - action: utter_base_cumprimentar
+  - intent: base_testa_acoes
+  - action: base_action_teste
+
+- story: testa acoes
+  steps:
+  - intent: base_testa_acoes
+  - action: base_action_teste
+
+- story: testa slots
+  steps:
+  - intent: base_informa_telefone
+  - action: base_action_telefone
+
+- story: path_license 1
+  steps:
+  - intent: base_license
+  - action: utter_base_license
+  - action: utter_base_continuar_conversa
+
+- story: path_license 2
+  steps:
+  - intent: base_cumprimentar
+  - action: utter_base_cumprimentar
+  - intent: base_license
+  - action: utter_base_license
+  - action: utter_base_continuar_conversa
+
+- story: path_triste 1
+  steps:
+  - intent: base_triste
+  - action: utter_base_triste
+  - action: utter_base_continuar_conversa
+
+- story: path_triste 2
+  steps:
+  - intent: base_cumprimentar
+  - action: utter_base_cumprimentar
+  - intent: base_triste
+  - action: utter_base_triste
+  - action: utter_base_continuar_conversa
+
+- story: cumprimentar
+  steps:
+  - intent: base_cumprimentar
+  - action: utter_base_cumprimentar
+
+- story: Despedir
+  steps:
+  - intent: base_despedir
+  - action: utter_base_despedir
+
+- story: Tudo Bem Story
+  steps:
+  - intent: base_tudo_bem
+  - action: utter_base_tudo_bem
+
+- story: Oi Tudo Bem Story
+  steps:
+  - intent: base_cumprimentar
+  - action: utter_base_cumprimentar
+  - intent: base_tudo_bem
+  - action: utter_base_tudo_bem
+
+- story: Nao entendi
+  steps:
+  - intent: base_diga_mais
+  - action: utter_base_diga_mais
+
+- story: fallback
+  steps:
+  - intent: base_out_of_scope
+  - action: utter_base_fallback
+
+- story: negar sem contexto
+  steps:
+  - intent: base_negar
+  - action: utter_base_despedir
+
+- story: elogios 1
+  steps:
+  - intent: base_elogios
+  - action: utter_base_elogios
+  - action: utter_base_continuar_conversa
+
+- story: elogios 2
+  steps:
+  - intent: base_cumprimentar
+  - action: utter_base_cumprimentar
+  - intent: base_elogios
+  - action: utter_base_elogios
+  - action: utter_base_continuar_conversa
+
+- story: meajuda 1
+  steps:
+  - intent: base_o_que_sei_falar
+  - action: utter_base_o_que_sei_falar
+
+- story: meajuda 2
+  steps:
+  - intent: base_cumprimentar
+  - action: utter_base_cumprimentar
+  - intent: base_o_que_sei_falar
+  - action: utter_base_o_que_sei_falar
+
+- story: objetivo
+  steps:
+  - intent: base_objetivo
+  - action: utter_base_objetivo
+
+- story: path_feedback 1
+  steps:
+  - intent: base_feedback
+  - action: utter_base_feedback
+  - action: utter_base_continuar_conversa
+
+- story: path_feedback 2
+  steps:
+  - intent: base_cumprimentar
+  - action: utter_base_cumprimentar
+  - intent: base_feedback
+  - action: utter_base_feedback
+  - action: utter_base_continuar_conversa
+
+- story: story_limpar_slots
+  steps:
+  - intent: base_limpar_slots
+  - action: action_restart
