@@ -175,20 +175,6 @@ stories:
   - action: utter_persona_signo
   - action: utter_base_continuar_conversa
 
-- story: path_triste 1
-  steps:
-  - intent: base_triste
-  - action: utter_base_triste
-  - action: utter_base_continuar_conversa
-
-- story: path_triste 2
-  steps:
-  - intent: base_cumprimentar
-  - action: utter_base_cumprimentar
-  - intent: base_triste
-  - action: utter_base_triste
-  - action: utter_base_continuar_conversa
-
 - story: path_historia 1
   steps:
   - intent: persona_historia

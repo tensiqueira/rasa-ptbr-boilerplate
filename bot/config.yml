@@ -1,7 +1,9 @@
-language : "pt"
+language : "pt_core_news_lg"
 
 pipeline:
-  - name: WhitespaceTokenizer
+  - name: SpacyNLP
+  - name: SpacyTokenizer
+  - name: SpacyFeaturizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -9,9 +11,10 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
-    epochs: 110
+    epochs: 220
   - name: EntitySynonymMapper
   - name: ResponseSelector
+    epochs: 220
 
 policies:
   - name: TEDPolicy
@@ -26,6 +29,6 @@ policies:
     max_history: 5
   - name: MappingPolicy
   - name: FallbackPolicy
-    nlu_threshold: 0.6
-    core_threshold: 0.6
+    nlu_threshold: 0.5
+    core_threshold: 0.5
     fallback_action_name: "utter_base_fallback"
