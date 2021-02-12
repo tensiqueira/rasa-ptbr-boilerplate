@@ -1,5 +1,4 @@
 nltk==3.4.5
-elasticsearch==7.0.4
 
 absl-py==0.10.0
 aio-pika==6.7.1
