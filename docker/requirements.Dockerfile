@@ -9,7 +9,7 @@ RUN apt-get update                                                             &
     pip install --no-cache-dir -r /tmp/requirements.txt                        && \
     python -m pip install spaCy --upgrade                                      && \
     python -m spacy download pt_core_news_lg                                   && \
-    pip install --no-cache-dir -r /tmp/x-requirements.txt                      && \
+    pip install --use-feature=2020-resolver --no-cache-dir -r /tmp/x-requirements.txt                      && \
     python -c "import nltk; nltk.download(['stopwords', 'rslp', 'punkt']);"    && \
     find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf               && \
     apt-get clean                                                              && \
