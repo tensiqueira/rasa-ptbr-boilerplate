@@ -106,17 +106,17 @@ entities:
 
 slots:
   cpf:
-    type: rasa.shared.core.slots.TextSlot
+    type: text
     initial_value: null
     auto_fill: true
     influence_conversation: true
   data_nascimento:
-    type: rasa.shared.core.slots.TextSlot
+    type: text
     initial_value: null
     auto_fill: true
     influence_conversation: true
   telefone:
-    type: rasa.shared.core.slots.TextSlot
+    type: text
     initial_value: null
     auto_fill: true
     influence_conversation: true
