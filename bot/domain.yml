@@ -126,6 +126,7 @@ slots:
 responses: {}
 
 actions:
+# Base
 - base_action_teste
 - base_action_telefone
 - base_login_form
@@ -152,6 +153,7 @@ actions:
 - utter_base_forms_cancelado
 - utter_base_feedback
 
+# Persona
 - utter_persona_religiao
 - utter_persona_time
 - utter_persona_genero
@@ -167,6 +169,7 @@ actions:
 - utter_persona_signo
 - utter_persona_historia
 
+# SVPM
 - utter_svpm_faq_teste
 - utter_svpm_faq_ajuda
 
