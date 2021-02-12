@@ -75,6 +75,7 @@ intents:
 - persona_historia:
     use_entities: true
 
+# SVPM
 - svpm_faq_teste:
     use_entities: true
 - svpm_faq_ajuda:
@@ -109,16 +110,20 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
+
   data_nascimento:
     type: text
     initial_value: null
     auto_fill: true
     influence_conversation: true
+
   telefone:
     type: text
     initial_value: null
     auto_fill: true
     influence_conversation: true
+
+responses: {}
 
 actions:
 - base_action_teste
