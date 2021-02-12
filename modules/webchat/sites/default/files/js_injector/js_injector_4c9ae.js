@@ -1,0 +1,1 @@
+jQuery( "li.leaf a" ).eq( 51 ).attr('target', '_blank');
