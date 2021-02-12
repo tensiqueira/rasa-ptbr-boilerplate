@@ -75,7 +75,6 @@ intents:
 - persona_historia:
     use_entities: true
 
-# SVPM
 - svpm_faq_teste:
     use_entities: true
 - svpm_faq_ajuda:
