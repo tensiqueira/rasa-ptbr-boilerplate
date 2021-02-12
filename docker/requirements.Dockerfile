@@ -5,7 +5,7 @@ COPY ./x-requirements.txt /tmp
 
 RUN apt-get update                                                             && \
     apt-get install -y gcc make build-essential git                            && \
-    python -m pip install --upgrade --force-reintall pip==.20.2.1              && \
+    python -m pip install --upgrade --force-reinstall pip==.20.2.1             && \
     pip install --no-cache-dir -r /tmp/requirements.txt                        && \
     python -m pip install spaCy --upgrade                                      && \
     python -m spacy download pt_core_news_lg                                   && \
