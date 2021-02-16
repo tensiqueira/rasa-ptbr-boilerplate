@@ -30,21 +30,20 @@ if not host.startswith("http://"):
 path = "/api/v1/login"
 
 bot = {
-    "name": os.getenv("ROCKETCHAT_BOT_NAME", "Bot"),
-    "username": os.getenv("ROCKETCHAT_BOT_USERNAME", "bot"),
-    "password": os.getenv("ROCKETCHAT_BOT_PASSWORD", "bot"),
+    "name": os.getenv("ROCKETCHAT_BOT_NAME", "mia"),
+    "username": os.getenv("ROCKETCHAT_BOT_USERNAME", "mia"),
+    "password": os.getenv("ROCKETCHAT_BOT_PASSWORD", "mia"),
     "avatar": os.getenv(
         "ROCKETCHAT_BOT_AVATAR_URL",
-        "https://raw.githubusercontent.com/"
-        "lappis-unb/rouana/master/images/rouana_avatar.jpeg",
+        "http://10.210.134.112:5010/assets/mia_head.png",
     ),
-    "email": os.getenv("ROCKETCHAT_BOT_USERNAME", "bot") + "@email.com",
+    "email": os.getenv("ROCKETCHAT_BOT_USERNAME", "mia") + "@marinha.mil.br",
 }
 
 admin_name = os.getenv("ROCKETCHAT_ADMIN_USERNAME", "admin")
 admin_password = os.getenv("ROCKETCHAT_ADMIN_PASSWORD", "admin")
 
-rasa_url = os.getenv("RASA_URL", "http://bot-rocket:5005/webhooks/rocketchat/webhook")
+rasa_url = os.getenv("RASA_URL", "http://10.210.134.112:5005/webhooks/rocketchat/webhook")
 user_header = None
 
 

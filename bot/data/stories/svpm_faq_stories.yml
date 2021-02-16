@@ -1,0 +1,25 @@
+version: "2.0"
+stories:
+  - story: svpm_story_teste
+    steps:
+      - intent: svpm_faq_teste
+      - action: utter_svpm_faq_teste
+
+  - story: svpm_story_ajuda
+    steps:
+      - intent: svpm_faq_ajuda
+      - action: utter_svpm_faq_ajuda
+
+  - story: svpm_story_ajuda_sim
+    steps:
+      - intent: svpm_faq_ajuda
+      - action: utter_svpm_faq_ajuda
+      - intent: base_afirmar
+      - action: utter_base_feedback
+
+  - story: svpm_story_ajuda_nao
+    steps:
+      - intent: svpm_faq_ajuda
+      - action: utter_svpm_faq_ajuda
+      - intent: base_negar
+      - action: utter_base_feedback

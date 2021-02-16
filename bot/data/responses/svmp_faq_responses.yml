@@ -1,0 +1,14 @@
+version: "2.0"
+responses:
+  utter_svpm_faq_teste:
+    - text: "Respondendo ao teste!"
+    - text: "Teste testado!"
+    - text: "Alô... som, som, um, dois... testando..."
+
+  utter_svpm_faq_ajuda:
+    - buttons:
+        - payload: "Sim"
+          title: "👍 Sim"
+        - payload: "Não"
+          title: "👎 Não"
+      text: "Isto ajudou?"

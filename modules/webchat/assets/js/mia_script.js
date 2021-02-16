@@ -93,7 +93,7 @@ $(document).ready(function () {
   function send(message) {
     console.log("User Message:", message);
     $.ajax({
-      url: "http://10.210.134.112:5005/webhooks/rest/webhook",
+      url: "http://10.210.134.112:5007/webhooks/rest/webhook",
       type: "POST",
       contentType: "application/json",
       data: JSON.stringify({

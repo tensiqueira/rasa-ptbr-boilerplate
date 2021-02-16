@@ -20,7 +20,7 @@ class LoginForm(FormAction):
 
     def name(self) -> Text:
         """Unique identifier of the form"""
-        return "login_form"
+        return "base_login_form"
 
     @staticmethod
     def required_slots(tracker: Tracker) -> List[Text]:
@@ -34,8 +34,8 @@ class LoginForm(FormAction):
         - a whole message
         or a list of them, where a first match will be picked"""
         return {
-            "cpf": self.from_text(not_intent="cancelar"),
-            "data_nascimento": self.from_text(not_intent="cancelar"),
+            "cpf": self.from_text(not_intent="base_cancelar"),
+            "data_nascimento": self.from_text(not_intent="base_cancelar"),
         }
 
     def submit(
@@ -67,10 +67,10 @@ class LoginForm(FormAction):
 
         regex = re.compile("[0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2}$")
         if re.match(regex, value) is None:
-            dispatcher.utter_template("utter_errado_cpf_formato", tracker)
+            dispatcher.utter_template("utter_base_errado_cpf_formato", tracker)
             return {"cpf": None}
         elif not isCpfValid(value):
-            dispatcher.utter_template("utter_errado_cpf_invalido", tracker)
+            dispatcher.utter_template("utter_base_errado_cpf_invalido", tracker)
             return {"cpf": None}
         else:
             return {"cpf": value}
@@ -90,7 +90,7 @@ class LoginForm(FormAction):
         if re.match(regex, value) is not None:
             return {"data_nascimento": value}
         else:
-            dispatcher.utter_template("utter_errado_data_nascimento", tracker)
+            dispatcher.utter_template("utter_base_errado_data_nascimento", tracker)
             # validation failed, set this slot to None, meaning the
             # user will be asked for the slot again
             return {"data_nascimento": None}
